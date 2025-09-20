@@ -1,15 +1,16 @@
+# app.py
 import os
 import threading
-import time
 from http.server import BaseHTTPRequestHandler, HTTPServer
+import subprocess
 
-# --- your script code here ---
-def main_script():
-    while True:
-        print("Running my bot/script...")
-        time.sleep(10)  # replace with your real code
+# Run your original start script in the background
+def run_main():
+    subprocess.run(["bash", "start"])
 
-# --- minimal web server for Koyeb health check ---
+threading.Thread(target=run_main, daemon=True).start()
+
+# Minimal HTTP server for Koyeb
 PORT = int(os.environ.get("PORT", 8000))
 
 class Handler(BaseHTTPRequestHandler):
@@ -18,14 +19,7 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(b"OK")
 
-def run_web_server():
+if __name__ == "__main__":
     server = HTTPServer(("0.0.0.0", PORT), Handler)
     print(f"Healthcheck server running on port {PORT}")
     server.serve_forever()
-
-if __name__ == "__main__":
-    # Run your script in a background thread
-    threading.Thread(target=main_script, daemon=True).start()
-    
-    # Start the web server (for Koyeb)
-    run_web_server()
