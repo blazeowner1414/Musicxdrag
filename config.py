@@ -5,7 +5,7 @@ from pyrogram import filters
 
 load_dotenv()
 
------------ REQUIRED VALUES (अपनी असली values यहाँ भरना) -------------
+# REQUIRED VALUES 
 
 API_ID = 33462523                     # तेरी असली API_ID
 API_HASH = "bd72f77058b3707f23ade6049517259b"   # तेरी असली API_HASH
