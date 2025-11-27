@@ -23,7 +23,7 @@ ASS_ID = 8258688313
 
 # OPTIONAL VALUES
 
-MONGO_DB_URI = mongodb+srv://BLAZE-MUSIC:Poipoi12%40@cluster0.s9qsrem.mongodb.net/?appName=Cluster0
+MONGO_DB_URI = "mongodb+srv://BLAZE-MUSIC:Poipoi12@cluster0.s9qsrem.mongodb.net/AnonXMusic?retryWrites=true&w=majority"
 DURATION_LIMIT_MIN = 200
 SERVER_PLAYLIST_LIMIT = 300
 
