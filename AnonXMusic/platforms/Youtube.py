@@ -163,8 +163,9 @@ class YouTubeAPI:
             link = self.base + link
         if "&" in link:
             link = link.split("&")[0]
-        ytdl_opts = {"quiet": True}
-        ydl = yt_dlp.YoutubeDL(ytdl_opts)
+    ytdl_opts = { "quiet": True,
+        "cookiefile": "cookies.txt",}
+ydl = yt_dlp.YoutubeDL(ytdl_opts)
         with ydl:
             formats_available = []
             r = ydl.extract_info(link, download=False)
@@ -251,6 +252,7 @@ class YouTubeAPI:
                 "nocheckcertificate": True,
                 "quiet": True,
                 "no_warnings": True,
+         "cookiefile": "cookies.txt",
             }
             x = yt_dlp.YoutubeDL(ydl_optssx) 
             if os.path.exists(xyz):
