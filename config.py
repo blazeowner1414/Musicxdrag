@@ -23,7 +23,7 @@ ASS_ID = 8258688313
 
 # OPTIONAL VALUES
 
-MONGO_DB_URI = None
+MONGO_DB_URI = mongodb+srv://BLAZE-MUSIC:Poipoi12%40@cluster0.s9qsrem.mongodb.net/?appName=Cluster0
 DURATION_LIMIT_MIN = 200
 SERVER_PLAYLIST_LIMIT = 300
 
@@ -37,8 +37,8 @@ UPSTREAM_REPO = "https://github.com/taslim19/musicxdrag"
 UPSTREAM_BRANCH = "main"
 GIT_TOKEN = None
 
-SUPPORT_CHANNEL = "https://t.me/haatsoja"
-SUPPORT_CHAT = "https://t.me/dragbackup"
+SUPPORT_CHANNEL = "https://t.me/BLAZE_ERA"
+SUPPORT_CHAT = "https://t.me/BLAZE_FIGHTERS"
 
 AUTO_LEAVING_ASSISTANT = False
 
