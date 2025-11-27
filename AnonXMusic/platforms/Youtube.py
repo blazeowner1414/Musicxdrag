@@ -81,3 +81,7 @@ class YouTubeAPI:
         await loop.run_in_executor(None, run)
 
         return file_path
+        echo '
+# --- compatibility alias ---
+YouTube = YoutubeAPI
+' >> AnonXMusic/platforms/Youtube.py
